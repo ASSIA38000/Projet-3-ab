@@ -1,0 +1,125 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+	/*********************** 	LISTE DES TACHES 	*************************/
+
+h2{
+    color: rgb(7, 7, 145);
+    font-size: 30px;
+    font-stretch: expanded;
+	text-align:center;
+}
+
+/*Input*/
+
+.input-taches{
+    width: 100%;
+    border: none;
+    outline: none;  
+    border-bottom:solid 2px rgb(7, 7, 145);
+    text-align: center;
+}
+
+#input-ajouter-tache::placeholder{
+    font-size: 18px;
+    color: rgb(11, 177, 248);
+}
+
+#input-ajouter-tache{
+    font-size: 18px;
+    color: darkslategray;
+}
+
+/*Bouton*/
+
+.btn-ajouter{
+    margin-top: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(35, 61, 233);
+    color: wheat;
+    padding: 10px;
+	width:10%;
+	margin-right:45%;
+	margin-left:45%;
+}
+
+.btn-ajouter:hover{
+    color: rgb(20, 88, 122);
+    background-color: rgb(184, 238, 226);
+    cursor: pointer;
+}
+
+/* liste générée par js */
+	
+.liste-element{
+    background-color: rgb(27, 231, 92);
+    color: rgb(47, 9, 64);
+    font-size: 20px;
+    text-align: left;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.supprimer{
+    background-color:rgb(11, 125, 11);
+    color:rgb(194, 226, 235);
+    padding:5px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    transition: 0.2s;
+    /*
+    text-decoration: none !important;   */
+}
+
+.supprimer:hover{
+    background-color: brown;
+    color: #333333;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*	Affichage de l'élément après clic	*/
+
+ul li.checked{
+    background-color: rgb(182, 240, 195);
+    color: rgb(79, 25, 69);
+    text-decoration: line-through;
+    text-align: center;
+}
+
+ul li{
+    cursor: pointer;
+    transition: 0.2s;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/*  Ajout du symbole checked   */
+	ul li.checked::before {
+    content: '';
+    position: relative;
+    border-color: rgb(85, 15, 106);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 0;
+    left: 10px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 5px;
+}
